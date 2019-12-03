@@ -1,0 +1,11 @@
+name: charm2
+summary: "Charm that creates a file with passed string"
+maintainer: Dominik Fleischmann <dominik.fleischmann@canonical.com>
+description: |
+  Charm that creates a file with the name of a string passed with the 
+  string interface
+subordinate: false
+series: ['xenial', 'bionic']
+requires:
+  string:
+    interface: string

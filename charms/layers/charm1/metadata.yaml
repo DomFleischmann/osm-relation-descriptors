@@ -1,0 +1,10 @@
+name: charm1
+summary: "Charm that send its hostname"
+maintainer: Dominik Fleischmann <dominik.fleischmann@canonical.com>
+description: |
+  Charm that sends its hostname through string interface
+subordinate: false
+series: ['xenial', 'bionic']
+provides:
+  string:
+    interface: string

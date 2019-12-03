@@ -1,0 +1,7 @@
+includes: 
+- 'layer:basic'
+- 'layer:vnfproxy'
+- 'interface:string'
+options:
+  basic:
+    use_venv: false
