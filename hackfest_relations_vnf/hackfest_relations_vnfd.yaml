@@ -43,14 +43,6 @@ vnfd:vnfd-catalog:
             vdu-configuration:
                 juju:
                     charm: charm2
-                    vca-relationships:
-                        relation:
-                        -   name: string
-                            entities:
-                            - id: mgmtVM
-                              endpoint: string
-                            - id: dataVM
-                              endpoint: string
                 initial-config-primitive:
                 -   seq: '1'
                     name: config
@@ -96,3 +88,11 @@ vnfd:vnfd-catalog:
                         value: ubuntu
                     -   name: ssh-password
                         value: osm4u
+        vnf-configuration:
+            relation:
+            -   name: string
+                entities:
+                - id: mgmtVM
+                  endpoint: string
+                - id: dataVM
+                  endpoint: string

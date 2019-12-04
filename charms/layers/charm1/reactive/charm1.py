@@ -1,5 +1,5 @@
 from charmhelpers.core.hookenv import status_set, log
-from charms.reactive import clear_flag, set_flag, when, when_not, endpoint_form_flag
+from charms.reactive import clear_flag, set_flag, when, when_not, endpoint_from_flag
 import charms.sshproxy
 
 
@@ -11,7 +11,7 @@ def install_charm1_proxy_charm():
     status_set('active', 'Ready!')
 
 @when('string.joined')
-def send_hostname:
+def send_hostname():
     """ Sends hostname of the machine """
     err = ''
     try:

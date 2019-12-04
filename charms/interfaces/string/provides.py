@@ -1,6 +1,6 @@
 from charmhelpers.core import hookenv
 from charms.reactive import set_flag, clear_flag
-from charms.reactive import Endpoint, scopes when
+from charms.reactive import Endpoint, scopes, when
 
 
 class StringProvides(Endpoint):
