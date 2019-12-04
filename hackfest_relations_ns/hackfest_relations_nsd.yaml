@@ -9,8 +9,6 @@ nsd:nsd-catalog:
         constituent-vnfd:
         -   vnfd-id-ref: hackfest_relations-vnf
             member-vnf-index: '1'
-        -   vnfd-id-ref: hackfest_relations-vnf
-            member-vnf-index: '2'
         vld:
         -   id: mgmtnet
             name: mgmtnet
@@ -22,9 +20,6 @@ nsd:nsd-catalog:
             -   vnfd-id-ref: hackfest_relations-vnf
                 member-vnf-index-ref: '1'
                 vnfd-connection-point-ref: vnf-mgmt
-            -   vnfd-id-ref: hackfest_relations-vnf
-                member-vnf-index-ref: '2'
-                vnfd-connection-point-ref: vnf-mgmt
         -   id: datanet
             name: datanet
             short-name: datanet
@@ -33,7 +28,3 @@ nsd:nsd-catalog:
             -   vnfd-id-ref: hackfest_relations-vnf
                 member-vnf-index-ref: '1'
                 vnfd-connection-point-ref: vnf-data
-            -   vnfd-id-ref: hackfest_relations-vnf
-                member-vnf-index-ref: '2'
-                vnfd-connection-point-ref: vnf-data
-
