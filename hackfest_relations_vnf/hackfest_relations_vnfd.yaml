@@ -15,6 +15,14 @@ vnfd:vnfd-catalog:
             name: vnf-data
             short-name: vnf-data
             type: VPORT
+        -   id: vnf-mgmt2
+            name: vnf-mgmt2
+            short-name: vnf-mgmt2
+            type: VPORT
+        -   id: vnf-data2
+            name: vnf-data2
+            short-name: vnf-data2
+            type: VPORT
         mgmt-interface:
             cp: vnf-mgmt
         vdu:
@@ -33,6 +41,7 @@ vnfd:vnfd-catalog:
                 virtual-interface:
                     type: VIRTIO
                 external-connection-point-ref: vnf-mgmt
+                mgmt-interface: true
             -   name: mgmtVM-eth1
                 position: '2'
                 type: EXTERNAL
@@ -63,17 +72,18 @@ vnfd:vnfd-catalog:
                 storage-gb: '10'
             interface:
             -   name: dataVM-eth0
+                mgmt-interface: true
                 position: '1'
                 type: EXTERNAL
                 virtual-interface:
                     type: VIRTIO
-                external-connection-point-ref: vnf-mgmt
+                external-connection-point-ref: vnf-mgmt2
             -   name: dataVM-xe0
                 position: '2'
                 type: EXTERNAL
                 virtual-interface:
                     type: VIRTIO
-                external-connection-point-ref: vnf-data
+                external-connection-point-ref: vnf-data2
             cloud-init-file: cloud-config.txt
             vdu-configuration:
                 juju:
